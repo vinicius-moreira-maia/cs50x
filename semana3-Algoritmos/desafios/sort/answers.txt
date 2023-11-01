@@ -1,0 +1,11 @@
+sort1 uses: Bubble Sort
+
+How do you know?: In the best case, which is when the list is sorted, with the file sorted50000.txt the sort1 program is considerably faster than the sort3.
+
+sort2 uses: Merge Sort
+
+How do you know?: It takes less time to sort in all the files i've tested.
+
+sort3 uses: Selection Sort
+
+How do you know?: It's the less quick from the 3 programs on the best case in sorted50000.txt, although is a little bit faster than sort1 in file 5000sorted.txt.
