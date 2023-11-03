@@ -1,7 +1,7 @@
 # CS50x
 
 ### Português / Portuguese
-Repositório criado para armazenar os códigos feitos durante o curso [CS50x](https://cs50.harvard.edu/x/2023/), oferecido 
+Repositório criado para armazenar os códigos feitos durante o curso [CS50x](https://cs50.harvard.edu/x/2022/), oferecido 
 gratuitamente pela Harvard. É importante ressaltar que partes de alguns dos arquivos
 deste repositório não são de minha autoria, alguns desafios já vinham com alguma implementação,
 onde o foco era completar o que se pedia.
