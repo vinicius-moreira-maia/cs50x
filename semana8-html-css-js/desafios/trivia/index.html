@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <script>
+            // o script estava sendo executado antes da árvore DOM ser montada, por isso o código deve estar dentro dessa função
+            window.onload = function(){
+                // TODO: Add code to check answers to questions
+
+                // PARTE 1
+
+                // querySelectorAll retorna uma 'NodeList' e não um 'Array', mas os elementos ainda podem ser acessados via índice
+                let botoes = document.querySelectorAll('.button_part1')
+
+                // iterando de uma forma similar ao Python (:
+                for (let botao of botoes){
+                    botao.addEventListener('click', function() {
+                                // o 'innerHTML' pega o texto assim como está no elemento !!
+                                if (botao.innerHTML !== "Esternocleidomastoideo")
+                                {
+                                    botao.style.backgroundColor = "red";
+                                    document.querySelector("#resp_part1").innerHTML = "Incorrect!";
+                                }
+                                else
+                                {
+                                    botao.style.backgroundColor = "green";
+                                    document.querySelector("#resp_part1").innerHTML = "Correct!";
+                                }
+
+                    });
+                }
+
+                // PARTE 2
+                let input = document.querySelector("#input_part2");
+
+                document.querySelector('#button_part2').addEventListener('click', function() {
+                    if (input.value == "5")
+                    {
+                        input.style.backgroundColor = "green";
+                        document.querySelector("#resp_part2").innerHTML = "Correct!";
+                    }
+                    else
+                    {
+                        input.style.backgroundColor = "red";
+                        document.querySelector("#resp_part2").innerHTML = "Incorrect!";
+                    }
+                });
+            }
+
+        </script>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <!-- TODO: Add multiple choice question here -->
+                <h3> Qual dos nomes abaixo se refere a um músculo presente no pescoço humano? </h3>
+                <p id = "resp_part1"></p>
+                <button class = "button_part1">Esternocleidomastoideo</button>
+                <button class = "button_part1">Romboide</button>
+                <button class = "button_part1">Trapezio</button>
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <!-- TODO: Add free response question here -->
+                <h3> Quantas copas do mundo o Brasil ganhou? </h3>
+                <p id = "resp_part2"></p>
+                <input type = "text" id = "input_part2">
+                <button id = "button_part2"> Check Answer </button>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,44 @@
+body {
+    margin: 5%;
+    text-align: center;
+}
+
+main {
+    background-color: rgb(233, 233, 233);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    padding: 2%;
+}
+
+footer
+{
+    margin-top: 5%;
+}
+
+h1
+{
+    padding: 2%;
+}
+
+/*Essa animação aqui eu realmente só copiei e colei, não entendi direito*/
+.hover-underline-animation {
+    display: inline-block;
+    position: relative;
+  }
+  
+.hover-underline-animation::after {
+    content: '';
+    position: absolute;
+    width: 10%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: black;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+  
+.hover-underline-animation:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}

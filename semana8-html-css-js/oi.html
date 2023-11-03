@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+       <title> Oi, fulano </title>
+    </head>
+    <body>
+        <form>
+            <input id = "nome" autocomplete = "off" autofocus placeholder = "Nome" type = "text">
+            <button type = "submit"> Enviar </button>
+        </form>
+    </body>
+    <script>
+        // tipo do evento é 'submit' e a função a ser executada (função anônima), que deve receber o argumento especial 'event' para referenciar o evento que faz com que ela seja chamada
+        document.querySelector('form').addEventListener('submit', function(event){
+            let nome = document.querySelector("#nome").value;
+            alert("oi, " + nome)
+            event.preventDefault(); // previne que meu formulário somente chame a função, similar a 'return false' do atributo 'onsubmit' do elemento <form>
+        });
+    </script>
+</html>
