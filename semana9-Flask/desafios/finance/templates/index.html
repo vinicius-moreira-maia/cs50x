@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Portfolio
+{% endblock %}
+
+{% block main %}
+    <h3>Portfólio</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Suas Ações</th>
+                <th>Quantidade</th>
+                <th>Preço Atual</th>
+                <th>Quant*Preço</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for p in port %}
+            <tr id="tr_data">
+                <td>{{ p['stock'] }}</td>
+                <td>{{ p['amount'] }}</td>
+                <td>{{ p['actual_price'] }}</td>
+                <td>quantXpreço</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <h4>Cash: {{ cash }}</h4>
+    <h4>Total:</h4>
+{% endblock %}

@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+
+{% block body %}
+    <h1>Registrados</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Sport</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for registrant in registrants %}
+            <tr>
+                <td>{{ registrant[0] }}</td>
+                <td>{{ registrant[1] }}</td>
+                <td>
+                    <form action="/deregister" method="post">
+                        <!--'registrants[2]' é o valor do id, de acordo com o banco de dados, por isso o 'name' da tag é 'id'-->
+                        <!--'value' é o que é mandado para o servidor, que é o id-->
+                        <!--pra enviar algo via formulário eu preciso ter um 'input', mesmo que esteja 'hidden'-->
+                        <input name="id" type="hidden" value="{{ registrant[2] }}">
+                        <button type="submit">Deregister</button>
+                    </form>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

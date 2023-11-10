@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Sell
+{% endblock %}
+
+{% block main %}
+  <h3>Vender Ações</h3>
+  <form action="/sell" method="post">
+        <select name="symbol">
+           {% for p in port %}
+               <option value="{{ p['id'] }}">{{ p['stock'] }}</option>
+           {% endfor %}
+        </select>
+        <input name="shares" autofocus autocomplete="off" type="text" required placeholder="nº de ações">
+        <button type="submit">Vender</button>
+  </form>
+{% endblock %}

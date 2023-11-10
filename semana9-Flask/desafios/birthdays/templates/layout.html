@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="/static/styles.css" rel="stylesheet">
+        <title>Birthdays</title>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Birthdays</h1>
+        </div>
+        <div class="container">
+            <div class="section">
+                <h2>Add a Birthday</h2>
+                <!-- TODO: Create a form for users to submit a name, a month, and a day -->
+                <form action="/" method="post">
+                   <input required placeholder="Nome" autofocus autocomplete="off" name="name" type="text">
+                   <input required placeholder="Mês" autofocus autocomplete="off" name="month" type="text">
+                   <input required placeholder="Dia" autofocus autocomplete="off" name="day" type="text">
+                   <button type="submit">Enviar</button>
+                </form>
+            </div>
+
+            <div class="section">
+
+                <h2>All Birthdays</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Birthday</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                       {% block body %}{%endblock%}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    <script src="/static/funcoes.js"></script>
+    </body>
+</html>

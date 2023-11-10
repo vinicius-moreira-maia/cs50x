@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+{% block body %}
+  <form action="/" method="post">
+     <h2>Qual sua cor favorita?</h2>
+     <!--'name' é o que se usa para se referir ao elemento-->
+     <select name="cor">
+        <!--'value' é o que é enviado pelo formulário-->
+        <option value="red">Flamengo</option>
+        <option value="green">Palmeiras</option>
+     </select>
+     <button type="submit">Enviar</button>
+  </form>
+  <p style="color:red">{{ msg }}</p>
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+{% block body %}
+{% for niver in nivers %}
+<tr>
+    <td>
+        {{ niver['name'] }}
+    </td>
+    <td>{{ niver['day'] }}/{{ niver['month'] }}</td>
+    <td>
+        <form action="/excluir" method="post">
+            <input name="id" type="hidden" value="{{ niver['id'] }}">
+            <button type="submit">Excluir</button>
+        </form>
+    </td>
+</tr>
+{% endfor %}
+{% endblock %}

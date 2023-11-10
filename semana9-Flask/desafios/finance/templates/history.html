@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    History
+{% endblock %}
+
+{% block main %}
+    <h3>Suas Transações</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Transaction Type</th>
+                <th>Stock Symbol</th>
+                <th>Amount</th>
+                <th>Purchase/Sale</th>
+                <th>Date/Time</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for h in hist %}
+            <tr id="tr_data">
+                <td>{{ h['type'] }}</td>
+                <td>{{ h['stock'] }}</td>
+                <td>{{ h['amount'] }}</td>
+                <td>{{ h['price'] }}</td>
+                <td>{{ h['time'] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
